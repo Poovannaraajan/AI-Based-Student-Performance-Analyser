@@ -1,0 +1,124 @@
+/* ===== Admin Pages Shared Styles ===== */
+
+.admin-risk-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+.admin-risk-card {
+    text-align: center;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.admin-risk-card:hover {
+    transform: translateY(-2px);
+}
+
+.risk-card-low {
+    background: var(--risk-low-bg);
+    border-color: rgba(0, 184, 148, 0.15);
+}
+
+.risk-card-medium {
+    background: var(--risk-medium-bg);
+    border-color: rgba(253, 203, 110, 0.15);
+}
+
+.risk-card-high {
+    background: var(--risk-high-bg);
+    border-color: rgba(225, 112, 85, 0.15);
+}
+
+.risk-card-critical {
+    background: var(--risk-critical-bg);
+    border-color: rgba(214, 48, 49, 0.15);
+}
+
+.admin-risk-count {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.risk-card-low .admin-risk-count {
+    color: var(--risk-low);
+}
+
+.risk-card-medium .admin-risk-count {
+    color: var(--risk-medium);
+}
+
+.risk-card-high .admin-risk-count {
+    color: var(--risk-high);
+}
+
+.risk-card-critical .admin-risk-count {
+    color: var(--risk-critical);
+}
+
+.admin-risk-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 4px 0;
+    color: var(--text-secondary);
+}
+
+.admin-risk-percent {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Audit Page */
+.audit-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.audit-report-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.audit-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.audit-stat {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    text-align: center;
+}
+
+.audit-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.audit-stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+    .admin-risk-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

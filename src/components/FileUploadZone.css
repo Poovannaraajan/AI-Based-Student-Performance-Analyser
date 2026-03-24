@@ -1,0 +1,111 @@
+.upload-zone-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.upload-zone {
+    border: 2px dashed var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    background: var(--bg-card);
+}
+
+.upload-zone:hover,
+.upload-zone.drag-active {
+    border-color: var(--accent-primary);
+    background: rgba(108, 92, 231, 0.04);
+}
+
+.upload-zone.upload-success {
+    border-color: var(--success);
+    cursor: default;
+}
+
+.upload-zone.upload-error {
+    border-color: var(--error);
+    cursor: default;
+}
+
+.upload-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: var(--accent-primary-light);
+    margin-bottom: var(--space-sm);
+}
+
+.upload-text {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.upload-subtext {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.upload-formats {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: var(--space-xs);
+}
+
+.upload-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.upload-file-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.file-size {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.upload-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status-success {
+    color: var(--success);
+}
+
+.status-error {
+    color: var(--error);
+}
+
+.status-validating {
+    color: var(--text-secondary);
+}
+
+.upload-preview {
+    animation: fadeIn 0.3s ease;
+}
+
+.upload-preview h4 {
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}

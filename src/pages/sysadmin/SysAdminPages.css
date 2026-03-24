@@ -1,0 +1,69 @@
+/* ===== SysAdmin Pages Styles ===== */
+
+.live-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 8px var(--success);
+    animation: pulse 2s ease infinite;
+}
+
+.sys-logs {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.sys-log-entry {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.log-time {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    min-width: 70px;
+}
+
+.log-level {
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    min-width: 65px;
+    text-align: center;
+}
+
+.level-info {
+    color: var(--info);
+    background: rgba(116, 185, 255, 0.1);
+}
+
+.level-warning {
+    color: var(--warning);
+    background: var(--risk-medium-bg);
+}
+
+.level-error {
+    color: var(--error);
+    background: var(--risk-critical-bg);
+}
+
+.log-message {
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.log-error .log-message {
+    color: var(--error);
+}
